@@ -9,12 +9,16 @@ namespace FIgureSquare
     public abstract class Figure
     {
         public double parameter;
-        public abstract double CountFigureSquare(double parameter);
-        public void GetParameterFromKeyboard()
+        
+
+public abstract double CountFigureSquare(double parameter);
+        
+
+public void GetParameterFromKeyboard()
         {
             while (!Double.TryParse(Console.ReadLine(), out double parsedInput))
             {
-                Console.WriteLine("Неверный ввод");
+                Console.WriteLine("Incorrect input, double is expected");
                 Console.ReadLine();
             }
             parameter = Double.Parse(Console.ReadLine());
