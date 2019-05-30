@@ -10,7 +10,8 @@ namespace FIgureSquare
 
             public override void CountFigureSquare()
             {
-                double squareSquare = Math.Sqrt(side);
+                side = Parameter;
+                double squareSquare = Math.Pow(side, 2);
                 Console.WriteLine($"Square square is equals to { squareSquare.ToString()}");
             }
     }

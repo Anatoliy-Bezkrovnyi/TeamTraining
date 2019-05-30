@@ -14,7 +14,8 @@ namespace FIgureSquare
 
 public override void CountFigureSquare()
         {
-            double circleSquare = pi* Math.Sqrt(radius);
+            radius = Parameter;
+            double circleSquare = pi* Math.Pow(radius, 2);
             Console.WriteLine($"Circle square is equals to {circleSquare.ToString()}");
         }
     }

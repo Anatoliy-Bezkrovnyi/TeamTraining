@@ -13,12 +13,13 @@ namespace FIgureSquare
             Circle circle = new Circle();
             Square square = new Square();
 
-            Console.WriteLine("Please enter circle radius (only integer and decimals are accepted), to count its square:");
+            Console.WriteLine("Please enter circle radius (only integer or decimals lager than zero are accepted), to count its square:");
             circle.GetParameterFromKeyboard();
             circle.CountFigureSquare();
-            Console.WriteLine("Please enter square side (only integer and decimals are accepted), to count its square:");
+            Console.WriteLine("Please enter square side (only integer or decimals lager than zero are accepted), to count its square:");
             square.GetParameterFromKeyboard();
             square.CountFigureSquare();
+            Console.ReadLine();
         }
     }
 }
