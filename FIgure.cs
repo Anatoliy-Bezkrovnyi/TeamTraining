@@ -7,21 +7,18 @@ using System.Threading.Tasks;
 namespace FIgureSquare
 {
     public abstract class Figure
-    {
-        public double parameter;
+    {        
         
+        public abstract void CountFigureSquare();
 
-public abstract double CountFigureSquare(double parameter);
-        
-
-public void GetParameterFromKeyboard()
+        public void GetParameterFromKeyboard()
         {
             while (!Double.TryParse(Console.ReadLine(), out double parsedInput))
             {
                 Console.WriteLine("Incorrect input, double is expected");
                 Console.ReadLine();
             }
-            parameter = Double.Parse(Console.ReadLine());
+            Double parameter = Double.Parse(Console.ReadLine());
         }
         
     }

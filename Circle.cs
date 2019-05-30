@@ -8,13 +8,14 @@ namespace FIgureSquare
 {
     public class Circle : Figure
     {
-        public static double radius;
+        public double radius;
         public const double pi = 3.14;
         
 
-public override double CountFigureSquare(double radius)
+public override void CountFigureSquare()
         {
-            return pi* radius * radius;
+            double circleSquare = pi* Math.Sqrt(radius);
+            Console.WriteLine($"Circle square is equals to {circleSquare.ToString()}");
         }
     }
 }
