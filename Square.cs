@@ -11,11 +11,11 @@ namespace FIgureSquare
                 GetParameterFromKeyboard();
             }
 
-            private double side = Parameter;        
+                   
 
             public override void CountFigureSquare()
             {
-                double squareSquare = Math.Pow(side, 2);
+                double squareSquare = Math.Pow(input, 2);
                 Console.WriteLine($"Square square is equals to { squareSquare.ToString()}");
             }
     }

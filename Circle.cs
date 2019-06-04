@@ -14,12 +14,12 @@ namespace FIgureSquare
             }
         
         public const double pi = 3.14;
-        private double radius = Parameter;
+        
         
 
         public override void CountFigureSquare()
         {
-            double circleSquare = pi* Math.Pow(radius, 2);
+            double circleSquare = pi* Math.Pow(input, 2);
             Console.WriteLine($"Circle square is equals to {circleSquare.ToString()}");
         }
     }
