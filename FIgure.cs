@@ -14,14 +14,39 @@ namespace FIgureSquare
 
         public void GetParameterFromKeyboard()
         {
-            double parsedInput = 0;
-            while (!(double.TryParse(Console.ReadLine(), out parsedInput) && parsedInput > 0)) 
-            {
+            bool isParsed = double.TryParse(Console.ReadLine(), out double parsedInput);
+            int i = 1;
+            
+            double temp = 0.0d;
+           
+            while (i < 3)
+                    {    
+                        if (!isParsed || parsedInput <= 0)
+                        
+                            {
+                              Console.WriteLine("Invalid input, only integer or decimals higher than zero are accepted");
+                              i++;
+                            }
+                        else 
+                            {
+                            temp = parsedInput;
+                            }                                
+                
+                }
+            
+                if(temp != 0.0)
+                {
+                    Parameter = temp;
+                }
+                else
+                {
+                     Random random = new Random();
+                     Parameter = random.NextDouble();
+                     Console.WriteLine($"To much unsuccessful attempts, random value equals to {Parameter.ToString()} was set");
+                }
 
-                Console.WriteLine("Invalid input, only integer or decimals higher than zero are accepted");
-            }
-            Parameter = parsedInput;
-        }
+                            
+        } 
         
     }
 }

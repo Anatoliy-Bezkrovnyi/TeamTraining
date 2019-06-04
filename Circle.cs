@@ -8,13 +8,17 @@ namespace FIgureSquare
 {
     public class Circle : Figure
     {
-        public double radius;
+        public Circle ()
+            {
+            GetParameterFromKeyboard();
+            }
+        
         public const double pi = 3.14;
+        private double radius = Parameter;
         
 
-public override void CountFigureSquare()
+        public override void CountFigureSquare()
         {
-            radius = Parameter;
             double circleSquare = pi* Math.Pow(radius, 2);
             Console.WriteLine($"Circle square is equals to {circleSquare.ToString()}");
         }
