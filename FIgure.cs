@@ -8,16 +8,15 @@ namespace FIgureSquare
 {
     public abstract class Figure
     {
-        public double input { get; set; }
-
         public abstract void CountFigureSquare();
+        public abstract void DoesItFitsFigureBoundaries(double value);
 
-        public void GetParameterFromKeyboard()
+        public double GetParameterFromKeyboard()
         {
             bool isParsed = double.TryParse(Console.ReadLine(), out double parsedInput);
             int i = 1;
 
-            double temp = 0.0d;
+            double temp = 0;
 
             while (i < 3)
             {
@@ -35,18 +34,15 @@ namespace FIgureSquare
 
             }
 
-            if (temp != 0.0)
-            {
-                input = temp;
-            }
-            else
+            if (temp == 0)
             {
                 Random random = new Random();
-                input = random.NextDouble();
-                Console.WriteLine($"To much unsuccessful attempts, random value equals to {input.ToString()} was set");
+                temp = random.NextDouble();
+                Console.WriteLine($"To much unsuccessful attempts, random value equals to {temp} was set");
             }
 
 
+            return temp;
         }
 
     }

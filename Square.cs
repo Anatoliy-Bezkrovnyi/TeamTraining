@@ -4,20 +4,32 @@ namespace FIgureSquare
 {
     public class Square : Figure
     {
-        
-                             
-            public Square ()
-            {
-                GetParameterFromKeyboard();
-            }
+        public double Side { get; private set; }
 
-                   
 
-            public override void CountFigureSquare()
+        public Square()
+        {
+            Side = GetParameterFromKeyboard();
+        }
+
+
+
+        public override void CountFigureSquare()
+        {
+            double squareSquare = Math.Pow(Side, 2);
+            Console.WriteLine($"Square square is equals to { squareSquare.ToString()}");
+        }
+        public override void DoesItFitsFigureBoundaries(double circleRadius)
+        {
+            if (Side <= Math.Sqrt(2 * Math.Pow(circleRadius, 2)))
             {
-                double squareSquare = Math.Pow(input, 2);
-                Console.WriteLine($"Square square is equals to { squareSquare.ToString()}");
+                Console.WriteLine("Your square can be put into previously provided circle.");
             }
+            else
+            {
+                Console.WriteLine("Your square is larger than previously provided circle.");
+            }
+        }
     }
 }
 
