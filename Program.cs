@@ -16,7 +16,7 @@ namespace FIgureSquare
             Console.WriteLine("Please enter circle radius (only integer or decimals lager than zero are accepted), to count its square:");
             Circle circle = new Circle();
             circle.CountFigureSquare();
-            Console.WriteLine("Please enter square side (only integer or decimals lager than zero are accepted), to count its square:");
+            Console.WriteLine("Please enter square side (only integer or decimals lager than zero are accepted), to count its area:");
             Square square = new Square();
             square.CountFigureSquare();
             circle.DoesItFitsFigureBoundaries(square.Side);

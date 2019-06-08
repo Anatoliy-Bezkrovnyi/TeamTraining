@@ -19,7 +19,7 @@ namespace FIgureSquare
 
         public override void CountFigureSquare()
         {
-            double circleSquare = pi * Math.Pow(Radius, 2);
+            double circleSquare = Math.Round(pi * Math.Pow(Radius, 2), 2);
             Console.WriteLine($"Circle square is equals to {circleSquare.ToString()}");
         }
         public override void DoesItFitsFigureBoundaries(double squareSide)
