@@ -20,7 +20,7 @@ namespace FIgureSquare
         public override void CountFigureSquare()
         {
             double circleSquare = Math.Round(pi * Math.Pow(Radius, 2), 2);
-            Console.WriteLine($"Circle square is equals to {circleSquare.ToString()}");
+            Console.WriteLine($"Circle square is equals to {circleSquare}");
         }
         public override void DoesItFitsFigureBoundaries(double squareSide)
         {
@@ -32,8 +32,6 @@ namespace FIgureSquare
             {
                 Console.WriteLine("Your circle is larger than previously provided square");
             }
-
-            new NotImplementedException();
         }
     }
 }

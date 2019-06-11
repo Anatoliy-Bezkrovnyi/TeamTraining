@@ -35,7 +35,7 @@ namespace FIgureSquare
             if (i == 0)
             {
                 Random random = new Random();
-                figureDimension = Math.Round(random.NextDouble() * (5 - 0.5), 2);
+                figureDimension = Math.Round((random.Next(45) / 10) + 0.5, 2);
                 Console.WriteLine($"To much unsuccessful attempts, random value equals to {figureDimension} was set");
             }
 

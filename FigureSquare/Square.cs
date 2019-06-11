@@ -17,7 +17,7 @@ namespace FIgureSquare
         public override void CountFigureSquare()
         {
             double squareSquare = Math.Round(Math.Pow(Side, 2), 2);
-            Console.WriteLine($"Square area is equals to { squareSquare.ToString()}");
+            Console.WriteLine($"Square area is equals to { squareSquare}");
         }
         public override void DoesItFitsFigureBoundaries(double circleRadius)
         {
