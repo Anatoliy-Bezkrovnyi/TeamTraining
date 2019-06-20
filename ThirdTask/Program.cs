@@ -6,7 +6,8 @@ namespace ThirdTask
     {
         static void Main(string[] args)
         {
-            Helper.GetNumbersRangeFromKeyboard();
+            Helper.GetMinRangeFromKeyboard();
+            Helper.GetMaxRangeFromKeyboard();
         }
     }
 }
