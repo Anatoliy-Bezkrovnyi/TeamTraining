@@ -53,9 +53,21 @@ namespace ThirdTask
                     Console.WriteLine("Invalid input. Only integer higher or equal to '0' are accepted. Difference between maximal and minimal boundaries should be more then 10");
                 }
             }
+        }
 
+        public static void ArrayMathOperations (int[] array)
+        {
+            int summOfTheElements = 0;
 
-
+            for (int i = 0; i < array.Length; i++)
+            {
+                if ((array[i] % 3 == 0) && (array[i] % 5 > 0))
+                {
+                    summOfTheElements = summOfTheElements + array[i];
+                    
+                }
+            }
+            Console.WriteLine($"The sum of array elements which can be divided to 3 and can't be devided to 5 is {summOfTheElements}");
         }
 
 
