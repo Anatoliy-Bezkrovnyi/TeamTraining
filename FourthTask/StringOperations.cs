@@ -46,7 +46,7 @@ namespace FourthTask
                 }
             }*/
 
-            for (int i = 0; i < lastArrayMemberIndex; i++)
+            for (int i = 0; i < trimmedArray.Length; i++)
             {
                 if (trimmedArray[i] != trimmedArray[lastArrayMemberIndex - i])
                 {
