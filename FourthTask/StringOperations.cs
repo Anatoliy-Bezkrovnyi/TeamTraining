@@ -26,7 +26,7 @@ namespace FourthTask
         {
             int lastArrayMemberIndex = trimmedArray.Length - 1;
 
-            /*for (int i = 0; i < trimmedArray.Length; i++)
+            for (int i = 0; i < trimmedArray.Length; i++)
             {
 
                 if (i == trimmedArray.Length - 1)
@@ -44,21 +44,23 @@ namespace FourthTask
                     Console.WriteLine("Entered phrase is not palindrom.");
                     break;
                 }
-            }*/
+            }
 
-            for (int i = 0; i < lastArrayMemberIndex; i++)
+            /*for (int i = 0; i < lastArrayMemberIndex; i++)
             {
                 if (trimmedArray[i] != trimmedArray[lastArrayMemberIndex - i])
                 {
                     Console.WriteLine("Entered phrase is not palindrom.");
                     break;
-                }
-                else if (i == lastArrayMemberIndex)                              
+                }                         
+                    
+                
+                if (i == lastArrayMemberIndex)                              
                 {
                     Console.WriteLine("Entered phrase is palindrom.");
                 }
-            }
-           
+            }*/
+
         }
     }
 }
