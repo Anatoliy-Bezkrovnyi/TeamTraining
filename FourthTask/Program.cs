@@ -10,6 +10,8 @@ namespace FourthTask
     {
         static void Main(string[] args)
         {
+            StringOperations.CheckIfStringIsPalindrome(StringOperations.ConvertStringToAlphaNumericArray(Helper.GetStringFromKeyboard()));
+            Console.ReadLine();
         }
     }
 }

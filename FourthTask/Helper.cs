@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace FourthTask
 {
-    class Helper
+    public static class Helper
     {
+        public static String GetStringFromKeyboard()
+        {
+            Console.WriteLine("Enter string to check whether it is palindrom or not");
+            String input = Console.ReadLine();
+            input = input.Trim().ToLower();
+
+            return input;
+        }
     }
 }
