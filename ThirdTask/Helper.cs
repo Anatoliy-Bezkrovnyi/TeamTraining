@@ -10,27 +10,21 @@ namespace ThirdTask
         public static int maxRange;
         public static void GetMinRangeFromKeyboard()
         {
-
             Console.WriteLine("Please, enter minimal boundaries for the numbers list. Only integer higher or equal to '0' are accepted");
 
-            int parsedInputMin;
             bool minInputIsNotCorrect = true;
 
             while (minInputIsNotCorrect)
             {
-                if (int.TryParse(Console.ReadLine(), out parsedInputMin) && parsedInputMin >= 0)
+                if (int.TryParse(Console.ReadLine(), out minRange) && minRange >= 0)
                 {
-                    minRange = parsedInputMin;
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input. Only integer higher or equal to '0' are accepted");
+                    Console.WriteLine("Invalid input. Only integer higher or equal to '0' are accepted. Please, try again.");
                 }
             }
-
-
-
         }
 
         public static void GetMaxRangeFromKeyboard()
@@ -38,19 +32,17 @@ namespace ThirdTask
 
             Console.WriteLine("Please, enter maximal boundaries for the numbers list. Only integer higher or equal to '0' are accepted");
 
-            int parsedInputMax;
             bool maxInputIsNotCorrect = true;
 
             while (maxInputIsNotCorrect)
             {
-                if (int.TryParse(Console.ReadLine(), out parsedInputMax) && (parsedInputMax - minRange > 10))
+                if (int.TryParse(Console.ReadLine(), out maxRange) && (maxRange - minRange > 10))
                 {
-                    maxRange = parsedInputMax;
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input. Only integer higher or equal to '0' are accepted. Difference between maximal and minimal boundaries should be more then 10");
+                    Console.WriteLine("Invalid input. Only integer higher or equal to '0' are accepted. Difference between maximal and minimal boundaries should be more then 10. Please try again");
                 }
             }
         }
@@ -63,7 +55,8 @@ namespace ThirdTask
             {
                 if ((array[i] % 3 == 0) && (array[i] % 5 > 0))
                 {
-                    summOfTheElements = summOfTheElements + array[i];
+                    summOfTheElements += array[i];
+                    Console.WriteLine(array[i]);
                     
                 }
             }
