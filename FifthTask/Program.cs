@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FifthTask
 {
@@ -6,7 +7,9 @@ namespace FifthTask
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Task task = new Task();
+            List<Task> taskList = new List<Task>();
+            taskList.Add(task);
         }
     }
 }
