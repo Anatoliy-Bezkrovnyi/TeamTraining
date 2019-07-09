@@ -29,23 +29,92 @@ namespace FifthTask
 
         public static PriorityEnum GetPriority()
         {
-            PriorityEnum en = PriorityEnum.High;
+            Console.WriteLine("Please select task priority, use '1', '2', '3' keys from numeric keyboard");
 
-            return en;
+            foreach (String priorityEnum in Enum.GetNames(typeof(PriorityEnum)))
+            {
+                Console.WriteLine(priorityEnum);
+            }
+
+            String prorityInput = Console.ReadLine();
+
+            while (true)
+            {
+                switch (prorityInput)
+                {
+                    case "1":
+                        return PriorityEnum.High;
+                    case "2":
+                        return PriorityEnum.Middle;
+                    case "3":
+                        return PriorityEnum.Low;
+                    default:
+                        Console.WriteLine("Invalid input, please ONLY '1', '2', '3' keys from numeric keyboard");
+                        prorityInput = Console.ReadLine();
+                        break;
+                }
+            }
+
+           
         }
+
 
         public static ComplexityEnum GetComplexity()
         {
-            ComplexityEnum en = ComplexityEnum.Light;
+            Console.WriteLine("Please select task priority, use '1', '2', '3' keys from numeric keyboard");
 
-            return en;
+            foreach (String priorityEnum in Enum.GetNames(typeof(PriorityEnum)))
+            {
+                Console.WriteLine(priorityEnum);
+            }
+
+            String prorityInput = Console.ReadLine();
+
+            while (true)
+            {
+                switch (prorityInput)
+                {
+                    case "1":
+                        return PriorityEnum.High;
+                    case "2":
+                        return PriorityEnum.Middle;
+                    case "3":
+                        return PriorityEnum.Low;
+                    default:
+                        Console.WriteLine("Invalid input, please ONLY '1', '2', '3' keys from numeric keyboard");
+                        prorityInput = Console.ReadLine();
+                        break;
+                }
+            }
         }
 
         public static TimeEnum GetTime()
         {
-            TimeEnum en = TimeEnum.Mild;
+            Console.WriteLine("Please select task priority, use '1', '2', '3' keys from numeric keyboard");
 
-            return en;
+            foreach (String priorityEnum in Enum.GetNames(typeof(PriorityEnum)))
+            {
+                Console.WriteLine(priorityEnum);
+            }
+
+            String prorityInput = Console.ReadLine();
+
+            while (true)
+            {
+                switch (prorityInput)
+                {
+                    case "1":
+                        return PriorityEnum.High;
+                    case "2":
+                        return PriorityEnum.Middle;
+                    case "3":
+                        return PriorityEnum.Low;
+                    default:
+                        Console.WriteLine("Invalid input, please ONLY '1', '2', '3' keys from numeric keyboard");
+                        prorityInput = Console.ReadLine();
+                        break;
+                }
+            }
         }
     }
 }
