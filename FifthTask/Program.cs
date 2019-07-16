@@ -7,9 +7,21 @@ namespace FifthTask
     {
         static void Main(string[] args)
         {
-            Task task = new Task();
+           
+
+           // Task task = new Task();
             List<Task> taskList = new List<Task>();
-            taskList.Add(task);
+            Input.AddNewTask(ref taskList);
+
+
+
+            //taskList.Add(task);
+            //Console.WriteLine(task.TaskID.ToString());
+            //Console.WriteLine(task.TaskName.ToString());
+            //Console.WriteLine(task.TaskDescription.ToString());
+            //Console.WriteLine(task.PriorityEnum.ToString());
+            //Console.WriteLine(task.ComplexityEnum.ToString());
+            //Console.WriteLine(task.Time.ToString());
         }
     }
 }

@@ -5,22 +5,25 @@ using System.Text;
 
 namespace FifthTask
 {
-    class Task
+    public class Task
     {
 
         public PriorityEnum PriorityEnum { get; set; }
         public ComplexityEnum ComplexityEnum { get; set; }
-        public TimeEnum TimeEnum { get; set; }
+        public int Time { get; set; }
+        public String TaskName { get; set; }
+        public int TaskID { get; set; }
+        public String TaskDescription { get; set; }
 
         public Task()
         {
-            taskId = Input.setTaskID();
-            taskName = Input.setTaskName();
-            taskDescription = Input.setTaskDescription();
+            TaskID = Input.setTaskID();
+            TaskName = Input.setTaskName();
+            TaskDescription = Input.setTaskDescription();
             PriorityEnum = Input.GetPriority();
             ComplexityEnum = Input.GetComplexity();
-            TimeEnum = Input.GetTime();
-
+            Time = (int)ComplexityEnum;
+            
         }
 
         
