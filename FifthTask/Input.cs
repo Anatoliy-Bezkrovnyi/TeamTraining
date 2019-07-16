@@ -33,16 +33,7 @@ namespace FifthTask
         }
 
 
-        //public static int setTaskID()
-        //{
-        //    int taskID = 0;
-        //    //while (taskID < 5)
-        //    //{
-        //    //    taskID++;                                
-        //    //}
-        //    return taskID;            
-        //}
-
+        
         public static String setTaskName()
         {
             Console.WriteLine("Please provide task name:");
@@ -127,13 +118,7 @@ namespace FifthTask
             return complexity;
         }
 
-        //public static int GetEnumValueAttribute<TEnum>(Enum value) where TEnum : struct
-        //{
-        //    FieldInfo fi = value.GetType().GetField(value.ToString());
-        //    EnumValueAttribute attribute = (EnumValueAttribute)fi.GetCustomAttribute(typeof(EnumValueAttribute), false);
-        //    return attribute.EnumValue;
-        //}
-
+       
 
     }
 }

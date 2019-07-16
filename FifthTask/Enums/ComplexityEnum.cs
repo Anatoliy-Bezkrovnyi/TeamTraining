@@ -6,11 +6,9 @@ namespace FifthTask.Enums
 {
     public enum ComplexityEnum
     {
-        //[EnumValue(4)]
-        Hard = 4,
-        //[EnumValue(2)]
-        Mild = 2,
-        //[EnumValue(1)]
+        
+        Hard = 4,        
+        Mild = 2,        
         Light = 1
     }
 }

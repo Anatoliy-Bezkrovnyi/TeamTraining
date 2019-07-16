@@ -10,7 +10,6 @@ namespace FifthTask
         {
            
 
-           // Task task = new Task();
             List<Task> taskList = new List<Task>();
             Input.AddNewTask(ref taskList);
 
