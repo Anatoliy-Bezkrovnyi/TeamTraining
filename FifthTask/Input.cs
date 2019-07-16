@@ -1,6 +1,7 @@
 ﻿using FifthTask.Enums;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace FifthTask
@@ -41,7 +42,7 @@ namespace FifthTask
 
         public static PriorityEnum GetPriority()
         {
-            Console.WriteLine("Please select task priority, use '0', '1', '2' keys from numeric keyboard");
+            Console.WriteLine("Please select task priority, use '1 - High', '2 - Medium', '3 - Low' keys from numeric keyboard");
 
             foreach (String priorityEnum in Enum.GetNames(typeof(PriorityEnum)))
             {
@@ -60,7 +61,7 @@ namespace FifthTask
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input. Please use only '0', '1', '2' keys from numeric keyboard");
+                    Console.WriteLine("Invalid input. Please, use only '1 - High', '2 - Medium', '3 - Low' keys from numeric keyboard");
                     counter--;
                 }
             }
@@ -104,6 +105,13 @@ namespace FifthTask
             }
         }
 
-        
+        //public static int GetEnumValueAttribute<TEnum>(Enum value) where TEnum : struct
+        //{
+        //    FieldInfo fi = value.GetType().GetField(value.ToString());
+        //    EnumValueAttribute attribute = (EnumValueAttribute)fi.GetCustomAttribute(typeof(EnumValueAttribute), false);
+        //    return attribute.EnumValue;
+        //}
+
+
     }
 }

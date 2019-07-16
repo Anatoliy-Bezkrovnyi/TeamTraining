@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FifthTask.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace FifthTask
@@ -14,6 +15,7 @@ namespace FifthTask
             Input.AddNewTask(ref taskList);
 
 
+            //Input.GetEnumValueAttribute<ComplexityEnum>(ComplexityEnum.Hard)
 
             //taskList.Add(task);
             //Console.WriteLine(task.TaskID.ToString());

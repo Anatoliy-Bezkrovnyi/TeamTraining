@@ -7,7 +7,7 @@ namespace FifthTask.Enums
     public enum PriorityEnum
     {
         High = 1,
-        Middle,
-        Low
+        Middle = 2,
+        Low = 3
     }
 }
