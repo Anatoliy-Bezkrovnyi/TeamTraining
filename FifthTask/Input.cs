@@ -8,23 +8,40 @@ namespace FifthTask
 {
     public class Input
     {
+        public static int taskId = 0;
 
         public static void AddNewTask(ref List<Task> tasks)
         {
-            int i = 10;
-            while(i > 5)
+            int counter = 5;
+            while(counter > 0)
             {
                 tasks.Add(new Task());
-                i--;
+                counter--;
+                Input.taskId++;
+                Console.WriteLine("Your task was created");
+                if (counter > 0)
+                {
+                    Console.WriteLine($"You should add {counter} more task(s), please proceed");
+                }
+                else
+                {
+                    Console.WriteLine("Task creation is finished");
+                }
             }
+           
+            
         }
 
 
-        public static int setTaskID()
-        {
-            int taskID = 0;
-            return taskID;
-        }
+        //public static int setTaskID()
+        //{
+        //    int taskID = 0;
+        //    //while (taskID < 5)
+        //    //{
+        //    //    taskID++;                                
+        //    //}
+        //    return taskID;            
+        //}
 
         public static String setTaskName()
         {
@@ -54,7 +71,7 @@ namespace FifthTask
 
             while (counter > 0)
             {
-                if (int.TryParse(Console.ReadLine(), out int parsedInput) && parsedInput >= 0 && parsedInput < 3)
+                if (int.TryParse(Console.ReadLine(), out int parsedInput) && parsedInput > 0 && parsedInput <= 3)
                 {
                     priority = (PriorityEnum)parsedInput;
                     break;                 
@@ -68,7 +85,7 @@ namespace FifthTask
 
             if (counter == 0)
             {
-                Console.WriteLine("Your task priority was set to defult 'Low' value");
+                Console.WriteLine("Your task priority was set to default 'Low' value");
             }
            
             return priority;
@@ -78,31 +95,36 @@ namespace FifthTask
 
         public static ComplexityEnum GetComplexity()
         {
-            Console.WriteLine("Please select task complexity, use '1', '2', '3' keys from numeric keyboard");
+            Console.WriteLine("Please select task complexity, use '4 - Hard', '2 - Mild', '1 - Light' keys from numeric keyboard");
 
             foreach (String complexityEnum in Enum.GetNames(typeof(ComplexityEnum)))
             {
                 Console.WriteLine(complexityEnum);
             }
 
-            String complexityInput = Console.ReadLine();
+            int counter = 3;
+            ComplexityEnum complexity = ComplexityEnum.Light;
 
-            while (true)
+            while (counter > 0)
             {
-                switch (complexityInput)
+                if (int.TryParse(Console.ReadLine(), out int parsedInput) && (parsedInput == 1 || parsedInput == 2 || parsedInput == 4))
                 {
-                    case "1":
-                        return ComplexityEnum.Hard;                        
-                    case "2":
-                        return ComplexityEnum.Mild;
-                    case "3":
-                        return ComplexityEnum.Light;
-                    default:
-                        Console.WriteLine("Invalid input, please ONLY '1', '2', '3' keys from numeric keyboard");
-                        complexityInput = Console.ReadLine();
-                        break;
+                    complexity = (ComplexityEnum)parsedInput;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please, use only '4 - Hard', '2 - Mild', '1 - Light' keys from numeric keyboard");
+                    counter--;
                 }
             }
+
+            if (counter == 0)
+            {
+                Console.WriteLine("Your task complexity was set to default 'Light' value");
+            }
+
+            return complexity;
         }
 
         //public static int GetEnumValueAttribute<TEnum>(Enum value) where TEnum : struct

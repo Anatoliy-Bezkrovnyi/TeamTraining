@@ -17,22 +17,16 @@ namespace FifthTask
 
         public Task()
         {
-            TaskID = Input.setTaskID();
+            TaskID = Input.taskId;
             TaskName = Input.setTaskName();
             TaskDescription = Input.setTaskDescription();
             PriorityEnum = Input.GetPriority();
             ComplexityEnum = Input.GetComplexity();
             Time = (int)ComplexityEnum;
             
-        }
+        }      
 
-        
-
-        int taskId = 0;
-        String taskName;
-        String taskDescription;
-
-        
+              
 
 
        
