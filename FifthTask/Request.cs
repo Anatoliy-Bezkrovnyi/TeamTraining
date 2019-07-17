@@ -117,7 +117,7 @@ namespace FifthTask
 
         public void ListOfTasksToCompleteBasedOnPriority(List<Task> taskList)
         {
-            List<Task> sortedTaskList = taskList.OrderByDescending(x => x.PriorityEnum).ThenByDescending(x => x.ComplexityEnum).ToList();
+            List<Task> sortedTaskList = taskList.OrderBy(x => x.PriorityEnum).ThenByDescending(x => x.ComplexityEnum).ToList();
             List<Task> tasksForDay = new List<Task>();
             int daytime = 8;
             for (int i = 0; i < sortedTaskList.Count; i++)
