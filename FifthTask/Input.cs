@@ -12,7 +12,7 @@ namespace FifthTask
 
         public static void AddNewTask(ref List<Task> tasks)
         {
-            int counter = 5;
+            int counter = 2;
             while(counter > 0)
             {
                 tasks.Add(new Task());

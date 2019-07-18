@@ -22,15 +22,84 @@ namespace FifthTask
             Console.WriteLine($"Total amount of time to solve all tasks is {timeSum} hours.");
         }
 
+        public static TEnum RequestForEnumValue<TEnum>() where TEnum : struct
+        {
+            Console.Clear();
+            TEnum result;
+            bool parseResult;
+
+            do
+            {
+                string _pr = Console.ReadLine();
+                parseResult = Enum.TryParse(_pr, ignoreCase: true, result: out result)
+                              & Enum.IsDefined(typeof(TEnum), result);
+
+                if (!parseResult)
+                {
+                    Console.Clear();
+                    Console.WriteLine($"Please, enter number or value from the current list");
+                }
+
+            } while (!parseResult);
+            return result;
+        }
+
         public void ListofTasksAccordingToPriority(List<Task> taskList)
         {
-            Console.WriteLine("Please enter tasks priority to find all corresponding tasks, use 'High', 'Medium', 'Low'.");
-
+            Console.WriteLine("Please enter tasks priority to find all corresponding tasks, use 'High', 'Middle', 'Low'.");
 
             int attempts = 3;
+            PriorityEnum priority;
+            bool parseResult = false;
+            List<Task> sortedList = new List<Task>();
+
 
             while (attempts != 0)
             {
+                string _pr = Console.ReadLine();
+                parseResult = Enum.TryParse(_pr, ignoreCase: true, result: out priority)
+                              & Enum.IsDefined(typeof(PriorityEnum), priority);
+
+                if(parseResult)
+                {
+                    sortedList = taskList.Where(x => x.PriorityEnum == priority)
+                                            .OrderByDescending(x => x.ComplexityEnum)
+                                            .ToList();
+                    break;
+                }
+
+                Console.WriteLine("Please, enter one from 'High', 'Middle' or 'Low'.");
+                attempts--;
+            }
+
+            if(parseResult)
+            {
+                if (sortedList.Count == 0)
+                {
+                    Console.WriteLine($"There are no tasks of selected priority");
+                }
+                else
+                {
+                    Console.WriteLine("Tasks of selected priority are:");
+                    foreach (Task task in sortedList)
+                    {
+                        Output.PrintTaskDetails(task);
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("All tasks were selected by default:");
+                foreach (Task task in taskList)
+                {
+                    Output.PrintTaskDetails(task);
+                }
+            }
+
+            /*
+            while (attempts != 0)
+            {
+                bool isSuccess = false;
                 String enteredPriority = Console.ReadLine().ToLower();
 
                 switch (enteredPriority)
@@ -98,6 +167,9 @@ namespace FifthTask
                         attempts--;
                         break;
                 }
+
+                if (isSuccess)
+                    break;
             }
             if (attempts == 0)
             {
@@ -111,7 +183,7 @@ namespace FifthTask
                     Output.PrintTaskDetails(task);
                 }
             }
-
+            */
 
         }
 
@@ -122,8 +194,8 @@ namespace FifthTask
             int daytime = 8;
             for (int i = 0; i < sortedTaskList.Count; i++)
             {
-                tasksForDay.Add(sortedTaskList.ElementAt(i));
-                daytime = daytime - sortedTaskList.ElementAt(i).Time;
+                tasksForDay.Add(sortedTaskList[i]);
+                daytime = daytime - sortedTaskList[i].Time;
 
                 if (daytime == 0)
                 {
@@ -136,7 +208,10 @@ namespace FifthTask
                 }
                 else if (daytime < 0)
                 {
-                    tasksForDay.RemoveAt(i);
+                    daytime = daytime + tasksForDay.Last().Time;
+                    //tasksForDay.RemoveAt(tasksForDay.IndexOf(tasksForDay.Last()));
+                    tasksForDay.Remove(tasksForDay.LastOrDefault());
+
                 }
             }
         }

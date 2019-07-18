@@ -20,7 +20,7 @@ namespace FifthTask
                 Output.PrintTaskDetails(task);
             }
             request.AmountOfTimeNeededToSolveAllTasks(taskList);
-            //request.ListofTasksAccordingToPriority(taskList);
+            request.ListofTasksAccordingToPriority(taskList);
             request.ListOfTasksToCompleteBasedOnPriority(taskList);
 
             
