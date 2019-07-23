@@ -6,5 +6,11 @@ namespace SixthTask
 {
     public class LightBulb
     {
+        public String State { get; set; }
+
+        public LightBulb (String State)
+        {
+            this.State = State;
+        }
     }
 }

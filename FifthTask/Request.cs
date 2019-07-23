@@ -6,9 +6,9 @@ using System.Text;
 
 namespace FifthTask
 {
-    public class Request
+    public class TaskManager //Selecting tasks based on queries
     {
-        public void AmountOfTimeNeededToSolveAllTasks(List<Task> taskList)
+        public void GetAmountOfTimeNeededToSolveAllTasks(List<Task> taskList)
         {
 
             int timeSum = 0;
@@ -199,11 +199,6 @@ namespace FifthTask
 
                 if (daytime == 0)
                 {
-                    Console.WriteLine("Your tasks for day:");
-                    foreach (Task task in tasksForDay)
-                    {
-                        Output.PrintTaskDetails(task);
-                    }
                     break;
                 }
                 else if (daytime < 0)
@@ -213,6 +208,11 @@ namespace FifthTask
                     tasksForDay.Remove(tasksForDay.LastOrDefault());
 
                 }
+            }
+            Console.WriteLine("Your tasks for day:");
+            foreach (Task task in tasksForDay)
+            {
+                Output.PrintTaskDetails(task);
             }
         }
     }

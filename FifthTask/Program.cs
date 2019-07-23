@@ -9,7 +9,7 @@ namespace FifthTask
         static void Main(string[] args)
         {
 
-            Request request = new Request();
+            TaskManager request = new TaskManager();
             List<Task> taskList = new List<Task>();
 
 
@@ -19,7 +19,7 @@ namespace FifthTask
             {
                 Output.PrintTaskDetails(task);
             }
-            request.AmountOfTimeNeededToSolveAllTasks(taskList);
+            request.GetAmountOfTimeNeededToSolveAllTasks(taskList);
             request.ListofTasksAccordingToPriority(taskList);
             request.ListOfTasksToCompleteBasedOnPriority(taskList);
 
