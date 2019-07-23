@@ -34,9 +34,9 @@ namespace SixthTask
                         {
                             simpleFestoon.Add(new LightBulb("Doesn't shine"));
                         }
-                    }
 
-                    Console.WriteLine();
+                        Console.WriteLine($"Bulb {i}: {simpleFestoon[i].State}");
+                    }                    
 
                     break;
                 }
@@ -53,7 +53,16 @@ namespace SixthTask
 
                 for (int i = 0; i < 20; i++)
                 {
-                    simpleFestoon.Add(lightBulb);
+                    if (i % 2 == 0 && isOn)
+                    {
+                        simpleFestoon.Add(new LightBulb("Shines"));
+                    }
+                    else
+                    {
+                        simpleFestoon.Add(new LightBulb("Doesn't shine"));
+                    }
+
+                    Console.WriteLine($"Bulb {i}: {simpleFestoon[i].State}");
                 }
             }
             

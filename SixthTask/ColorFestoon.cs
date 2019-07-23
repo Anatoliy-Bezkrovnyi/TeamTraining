@@ -6,5 +6,9 @@ namespace SixthTask
 {
     class ColorFestoon : Festoon
     {
+        public override void CreateFestoon()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

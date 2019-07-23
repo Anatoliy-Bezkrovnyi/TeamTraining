@@ -6,7 +6,8 @@ namespace SixthTask
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SimpleFestoon simpleFestoon = new SimpleFestoon();
+            simpleFestoon.CreateFestoon();
         }
     }
 }
