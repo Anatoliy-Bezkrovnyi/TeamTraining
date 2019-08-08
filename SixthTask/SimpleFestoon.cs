@@ -4,19 +4,18 @@ using System.Text;
 
 namespace SixthTask
 {
-    public class SimpleFestoon : Festoon
+    public class SimpleFestoon<T> : Festoon<T>
     {
-        public override void CreateFestoon()
+        public override void CreateFestoon<SimpleFestoon>()
         {
             int simpleBulbsQuantity = 0;
             int counter = 3;
             List<LightBulb> simpleFestoon = new List<LightBulb>();
             //LightBulb lightBulb = new LightBulb();
-            //TODO: CreateFestoon Festoon
+            // TODO: CreateFestoon Festoon
 
-                //TODO: Light Feston
-                //Enum state
-                //Enum color
+                // TODO: Light Feston
+               
 
             Console.WriteLine("Please enter the quantity of simple lightbulbs to create simple festoon:");
             DateTime date = DateTime.Now;

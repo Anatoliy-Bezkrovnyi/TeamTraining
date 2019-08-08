@@ -10,6 +10,9 @@ namespace SixthTask
         {
             CreateFestoon<T>();            
         }
-        public abstract void CreateFestoon<T>();
+
+        
+        protected abstract void CreateFestoon<T>();
+        protected abstract void LightUpFestoon<T>();
     }
 }

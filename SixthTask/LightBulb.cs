@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SixthTask.Enums;
 
 namespace SixthTask
 {
     public class LightBulb
     {
-        public String State { get; set; }
+        public StateEnum State { get; set; }
 
-        public LightBulb (String State)
+        public LightBulb ()
         {
-            this.State = State;
+            this.State = StateEnum.Off;
         }
     }
 }
