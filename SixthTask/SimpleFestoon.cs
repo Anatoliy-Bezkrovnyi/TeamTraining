@@ -12,6 +12,11 @@ namespace SixthTask
             int counter = 3;
             List<LightBulb> simpleFestoon = new List<LightBulb>();
             //LightBulb lightBulb = new LightBulb();
+            //TODO: CreateFestoon Festoon
+
+                //TODO: Light Feston
+                //Enum state
+                //Enum color
 
             Console.WriteLine("Please enter the quantity of simple lightbulbs to create simple festoon:");
             DateTime date = DateTime.Now;

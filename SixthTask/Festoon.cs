@@ -4,8 +4,12 @@ using System.Text;
 
 namespace SixthTask
 {
-    public abstract class Festoon
+    public abstract class Festoon<T>
     {
-        public abstract void CreateFestoon();
+        protected Festoon()
+        {
+            CreateFestoon<T>();            
+        }
+        public abstract void CreateFestoon<T>();
     }
 }
