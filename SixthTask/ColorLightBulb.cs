@@ -5,9 +5,8 @@ using SixthTask.Enums;
 
 namespace SixthTask
 {
-    public class ColorLightBulb
+    public class ColorLightBulb : LightBulb
     {
-        public StateEnum State { get; set; }
         public ColorEnum Color { get; set; }
     }
 }

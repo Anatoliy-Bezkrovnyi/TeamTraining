@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SixthTask
 {
@@ -8,6 +9,10 @@ namespace SixthTask
         {
             SimpleFestoon simpleFestoon = new SimpleFestoon();
             simpleFestoon.LightUpFestoon(Festoon.NewFestoon);
+
+            Festoon<LightBulb> festoon = create;
+
+            Festoon<LightBulb> Newfestoon = festoon.cre;
             
         }
     }

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace SixthTask
 {
-    public class SimpleFestoon : Festoon T
+    public class SimpleFestoon : Festoon<LightBulb>
     {
-        protected override List<LightBulb> CreateFestoon()
+        protected List<LightBulb> CreateFestoon<LightBulb>()
         {
             int simpleBulbsQuantity = 0;
             int counter = 3;
@@ -65,6 +65,11 @@ namespace SixthTask
             //bool isOn = date.Minute % 2 == 0;
 
             //throw new NotImplementedException();
+        }
+
+        public override void LightUpFestoon(LightBulb NewFestoon)
+        {
+            throw new NotImplementedException();
         }
     }
 }
