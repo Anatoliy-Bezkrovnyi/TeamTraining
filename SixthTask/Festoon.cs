@@ -6,13 +6,16 @@ namespace SixthTask
 {
     public abstract class Festoon<T>
     {
+
+        public T NewFestoon { get; set; }
+
         protected Festoon()
         {
-            CreateFestoon<T>();            
+            NewFestoon = CreateFestoon();            
         }
 
         
-        protected abstract void CreateFestoon<T>();
-        protected abstract void LightUpFestoon<T>();
+        protected abstract T CreateFestoon();
+        public abstract void LightUpFestoon(T NewFestoon);
     }
 }

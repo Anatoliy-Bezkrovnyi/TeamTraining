@@ -7,7 +7,7 @@ namespace SixthTask
         static void Main(string[] args)
         {
             SimpleFestoon simpleFestoon = new SimpleFestoon();
-            simpleFestoon.CreateFestoon();
+            simpleFestoon.LightUpFestoon(Festoon.NewFestoon);
             
         }
     }

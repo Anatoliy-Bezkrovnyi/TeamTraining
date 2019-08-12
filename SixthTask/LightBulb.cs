@@ -9,9 +9,9 @@ namespace SixthTask
     {
         public StateEnum State { get; set; }
 
-        public LightBulb ()
-        {
-            this.State = StateEnum.Off;
-        }
+        //public LightBulb ()
+        //{
+        //    this.State = StateEnum.Off;
+        //}
     }
 }
